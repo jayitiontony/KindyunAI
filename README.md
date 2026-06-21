@@ -1,7 +1,7 @@
 KindyunAI 发布说明 (Release Notes) — Version 1.0.0
    *发布日期:* 2026-06-21
 
-   *概述:* 欢迎使用 KindyunAI v1.0.0！这是 KindyunAI 本地 AI 助手的首个稳定版本。本次发布将命令行 REPL、Web 服务与外部 API 集成于单一进程中，提供了完整的 RESTful API、流式响应支持、内置安全机制以及开箱即用的 Web 前端界面。
+   *概述:* 欢迎使用 KindyunAI v1.0.0！这是 KindyunAI 本地 AI 助手的首个稳定版本。本次发布将命令行 REPL、Web 服务与外部 API 集成于单一进程中，提供了完整的 RESTful API、流式响应支持、内置安全机制以及开箱即用的 Web 前端界面。你只需要在本地搭一个本地AI建议使用llama.cpp搭建，非常简单。
 
    *🌟 新增功能 (New Features)*
    - **单进程一体化架构**：`KindyunAI.exe` 同时运行 CLI REPL、Web 服务与外部 API，简化部署。
@@ -37,7 +37,7 @@ KindyunAI 发布说明 (Release Notes) — Version 1.0.0
    - 版权：© 2026 Kindyun.com. All rights reserved.
    - 许可协议：专有软件 (Proprietary)，允许项目内使用、学习与修改。禁止未经授权的对外分发、逆向工程及删除版权标识。
    - 联系作者：jayition <jayition@qq.com>
-   - 官方网站：https://Kindyun.com
+   - 官方网站：http://Kindyun.com
 
    *🙏 致谢 (Acknowledgments)*
    感谢 cpp-httplib, nlohmann/json, libcurl, SQLite 等开源项目为本次发布提供的支持。
