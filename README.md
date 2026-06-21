@@ -1,4 +1,4 @@
- *标题:* KindyunAI 发布说明 (Release Notes) — Version 1.0.0
+KindyunAI 发布说明 (Release Notes) — Version 1.0.0
    *发布日期:* 2026-06-21
 
    *概述:* 欢迎使用 KindyunAI v1.0.0！这是 KindyunAI 本地 AI 助手的首个稳定版本。本次发布将命令行 REPL、Web 服务与外部 API 集成于单一进程中，提供了完整的 RESTful API、流式响应支持、内置安全机制以及开箱即用的 Web 前端界面。
