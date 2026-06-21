@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="KindyunPluginWebBrowser" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/KindyunPluginWebBrowser" prefix_auto="0" extension=".dll" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++17" />
+					<Add option="-DKINDYUN_PLUGIN_EXPORTS" />
+					<Add directory="../../include" />
+					<Add directory="../.." />
+					<Add directory="../../../curl-8.19.0/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-shared" />
+					<Add option="-L../../../curl-8.19.0/lib" />
+					<Add option="-lcurl" />
+					<Add option="-lwtsapi32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="KindyunPluginWebBrowser.cpp" />
+		<Unit filename="KindyunPluginWebBrowser.hpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

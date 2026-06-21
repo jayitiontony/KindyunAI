@@ -1,0 +1,79 @@
+{
+    "version": 1,
+    "llm": {
+        "base_url": "http://localhost:8080",
+        "model": "llama3",
+        "temperature": 0.7,
+        "max_tokens": 128000,
+        "max_context_tokens": 128000,
+        "sliding_window_tokens": 120000,
+        "enable_summarization": true,
+        "compress_threshold_ratio": 0.8,
+        "debug_conversation": true,
+        "preserve_recent_messages": 10
+    },
+    "http": {
+        "curl_timeout_seconds": 360,
+        "stream_timeout_seconds": 360
+    },
+    "agent": {
+        "max_iterations": 50,
+        "empty_response_retries": 3,
+        "thinking_prefill_retries": 2
+    },
+    "tools": {
+        "enabled_toolsets": ["core", "terminal", "edit", "search", "memory", "todo", "plugin"],
+        "disabled_tools": [],
+        "approval_required": ["write_file", "remove_file", "terminal"]
+    },
+    "security": {
+        "protected_paths": ["C:\\Windows", "C:\\Windows\\System32", "/etc"],
+        "max_file_read_chars": 100000,
+        "terminal_timeout_seconds": 300
+    },
+    "web": {
+        "_comment": "KindyunAIServer (HTTP + Web UI + External API) config, see docs/WEB_SERVICE_DESIGN.md",
+        "enabled": true,
+        "host": "127.0.0.1",
+        "port": 8765,
+        "api_token": "kindyun-dev-token-change-me",
+        "enable_external_api": true,
+        "cors_allow_origins": ["*"],
+        "static_dir": "web/static",
+        "templates_dir": "web/templates",
+        "rate_limit": {
+            "requests_per_minute": 120
+        },
+        "session": {
+            "idle_ttl_seconds": 3600,
+            "max_concurrent": 64,
+            "persist_on_disk": false,
+            "db_path": "kindyun_memory_server.db"
+        },
+        "approval_mode": "auto",
+        "external_services": {
+            "allowlist": ["echo", "weather", "http"],
+            "denylist": [],
+            "http_forward": {
+                "allowed_hosts": [
+                    "wttr.in",
+                    "api.github.com",
+                    "*.openai.com",
+                    "*.anthropic.com"
+                ],
+                "denied_hosts": [
+                    "localhost",
+                    "127.0.0.1",
+                    "169.254.169.254",
+                    "metadata.google.internal",
+                    "::1"
+                ],
+                "timeout_seconds": 30
+            }
+        },
+        "log": {
+            "level": "info",
+            "access_log": true
+        }
+    }
+}

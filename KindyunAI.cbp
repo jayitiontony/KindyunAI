@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="KindyunAI" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/KindyunAI" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-std=c++17" />
+					<Add directory="../curl-8.19.0/include" />
+					<Add directory="cpp-httplib" />
+					<Add directory="include" />
+					<Add directory="src/server" />
+					<Add directory="." />
+				</Compiler>
+				<Linker>
+					<Add option="-L../curl-8.19.0/lib" />
+					<Add option="-lcurl" />
+					<Add option="-lwtsapi32" />
+					<Add option="-lws2_32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/KindyunAI" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++17" />
+					<Add directory="../curl-8.19.0/include" />
+					<Add directory="cpp-httplib" />
+					<Add directory="include" />
+					<Add directory="src/server" />
+					<Add directory="." />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-L../curl-8.19.0/lib" />
+					<Add option="-lcurl" />
+					<Add option="-lwtsapi32" />
+					<Add option="-lws2_32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add option="-D_WIN32_WINNT=0x0A00" />
+		</Compiler>
+		<Unit filename="include/kindyun/ApprovalManager.hpp" />
+		<Unit filename="include/kindyun/Config.hpp" />
+		<Unit filename="include/kindyun/ConversationLoop.hpp" />
+		<Unit filename="include/kindyun/ExternalService.hpp" />
+		<Unit filename="include/kindyun/HttpServer.hpp" />
+		<Unit filename="include/kindyun/KindyunGlobal.hpp" />
+		<Unit filename="include/kindyun/KindyunPlugin.hpp" />
+		<Unit filename="include/kindyun/LLMClient.hpp" />
+		<Unit filename="include/kindyun/MemoryDB.hpp" />
+		<Unit filename="include/kindyun/SessionManager.hpp" />
+		<Unit filename="include/kindyun/TokenEstimator.hpp" />
+		<Unit filename="include/kindyun/ToolBase.hpp" />
+		<Unit filename="include/kindyun/ToolDispatcher.hpp" />
+		<Unit filename="include/kindyun/Types.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="sqlite3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sqlite3.h" />
+		<Unit filename="src/Config.cpp" />
+		<Unit filename="src/LLMClient.cpp" />
+		<Unit filename="src/core/ApprovalManager.cpp" />
+		<Unit filename="src/core/ConversationLoop.cpp" />
+		<Unit filename="src/core/MemoryDB.cpp" />
+		<Unit filename="src/core/PluginLoader.cpp" />
+		<Unit filename="src/core/TokenEstimator.cpp" />
+		<Unit filename="src/server/ApiGateway.cpp" />
+		<Unit filename="src/server/ApiHandlers.cpp" />
+		<Unit filename="src/server/ExternalService.cpp" />
+		<Unit filename="src/server/HttpServer.cpp" />
+		<Unit filename="src/server/SessionManager.cpp" />
+		<Unit filename="src/server/services/EchoService.cpp" />
+		<Unit filename="src/server/services/HttpForwardService.cpp" />
+		<Unit filename="src/server/services/ServiceBase.cpp" />
+		<Unit filename="src/server/services/WeatherService.cpp" />
+		<Unit filename="src/tools/ToolDispatcher.cpp" />
+		<Unit filename="src/tools/ToolRegistry.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
